@@ -1,0 +1,430 @@
+2026-04-21 23:59:43,916 [INFO] =======================================================
+2026-04-21 23:59:43,916 [INFO] ECOMMERCE PIPELINE — DATA INGESTION
+2026-04-21 23:59:43,917 [INFO] Destination : POSTGRES
+2026-04-21 23:59:43,917 [INFO] Source dir  : data/raw
+2026-04-21 23:59:43,917 [INFO] =======================================================
+2026-04-21 23:59:43,918 [INFO] 
+Ingesting olist_orders_dataset.csv...
+2026-04-21 23:59:44,350 [INFO]   Read 99,441 rows, 8 columns
+2026-04-21 23:59:44,350 [INFO]   Validating raw_orders (99,441 rows)...
+2026-04-21 23:59:44,446 [INFO]   Validation passed — 99,441 rows ready
+2026-04-21 23:59:44,448 [ERROR]   FAILED: raw_orders — No module named 'sqlalchemy'
+2026-04-21 23:59:44,448 [INFO] 
+Ingesting olist_order_items_dataset.csv...
+2026-04-21 23:59:44,661 [INFO]   Read 112,650 rows, 7 columns
+2026-04-21 23:59:44,661 [INFO]   Validating raw_order_items (112,650 rows)...
+2026-04-21 23:59:44,720 [INFO]   Validation passed — 112,650 rows ready
+2026-04-21 23:59:44,721 [ERROR]   FAILED: raw_order_items — No module named 'sqlalchemy'
+2026-04-21 23:59:44,721 [INFO] 
+Ingesting olist_customers_dataset.csv...
+2026-04-21 23:59:44,834 [INFO]   Read 99,441 rows, 5 columns
+2026-04-21 23:59:44,834 [INFO]   Validating raw_customers (99,441 rows)...
+2026-04-21 23:59:44,912 [INFO]   Validation passed — 99,441 rows ready
+2026-04-21 23:59:44,913 [ERROR]   FAILED: raw_customers — No module named 'sqlalchemy'
+2026-04-21 23:59:44,913 [INFO] 
+Ingesting olist_products_dataset.csv...
+2026-04-21 23:59:44,961 [INFO]   Read 32,951 rows, 9 columns
+2026-04-21 23:59:44,961 [INFO]   Validating raw_products (32,951 rows)...
+2026-04-21 23:59:44,964 [WARNING]     NULL: 610 nulls in product_category_name
+2026-04-21 23:59:44,981 [INFO]   Validation passed — 32,951 rows ready
+2026-04-21 23:59:44,982 [ERROR]   FAILED: raw_products — No module named 'sqlalchemy'
+2026-04-21 23:59:44,982 [INFO] 
+Ingesting olist_order_payments_dataset.csv...
+2026-04-21 23:59:45,065 [INFO]   Read 103,886 rows, 5 columns
+2026-04-21 23:59:45,065 [INFO]   Validating raw_order_payments (103,886 rows)...
+2026-04-21 23:59:45,107 [INFO]   Validation passed — 103,886 rows ready
+2026-04-21 23:59:45,108 [ERROR]   FAILED: raw_order_payments — No module named 'sqlalchemy'
+2026-04-21 23:59:45,108 [INFO] 
+Ingesting olist_order_reviews_dataset.csv...
+2026-04-21 23:59:45,446 [INFO]   Read 99,224 rows, 7 columns
+2026-04-21 23:59:45,446 [INFO]   Validating raw_order_reviews (99,224 rows)...
+2026-04-21 23:59:45,464 [WARNING]     DEDUP: 814 duplicate review_id — dropping
+2026-04-21 23:59:45,546 [INFO]   Validation passed — 98,410 rows ready
+2026-04-21 23:59:45,547 [ERROR]   FAILED: raw_order_reviews — No module named 'sqlalchemy'
+2026-04-21 23:59:45,551 [INFO] 
+Ingesting olist_sellers_dataset.csv...
+2026-04-21 23:59:45,562 [INFO]   Read 3,095 rows, 4 columns
+2026-04-21 23:59:45,562 [INFO]   Validating raw_sellers (3,095 rows)...
+2026-04-21 23:59:45,568 [INFO]   Validation passed — 3,095 rows ready
+2026-04-21 23:59:45,568 [ERROR]   FAILED: raw_sellers — No module named 'sqlalchemy'
+2026-04-21 23:59:45,570 [INFO] 
+Ingesting olist_geolocation_dataset.csv...
+2026-04-21 23:59:46,167 [INFO]   Read 1,000,163 rows, 5 columns
+2026-04-21 23:59:46,168 [INFO]   Validating raw_geolocation (1,000,163 rows)...
+2026-04-21 23:59:46,475 [INFO]   Validation passed — 1,000,163 rows ready
+2026-04-21 23:59:46,476 [ERROR]   FAILED: raw_geolocation — No module named 'sqlalchemy'
+2026-04-21 23:59:46,476 [INFO] 
+Ingesting product_category_name_translation.csv...
+2026-04-21 23:59:46,489 [INFO]   Read 71 rows, 2 columns
+2026-04-21 23:59:46,489 [INFO]   Validating raw_category_translation (71 rows)...
+2026-04-21 23:59:46,492 [INFO]   Validation passed — 71 rows ready
+2026-04-21 23:59:46,492 [ERROR]   FAILED: raw_category_translation — No module named 'sqlalchemy'
+2026-04-21 23:59:46,492 [INFO] 
+=======================================================
+2026-04-21 23:59:46,493 [INFO] INGESTION SUMMARY
+2026-04-21 23:59:46,493 [INFO] =======================================================
+2026-04-21 23:59:46,493 [INFO]   [!!] raw_orders                                        0 rows
+2026-04-21 23:59:46,493 [INFO]   [!!] raw_order_items                                   0 rows
+2026-04-21 23:59:46,493 [INFO]   [!!] raw_customers                                     0 rows
+2026-04-21 23:59:46,493 [INFO]   [!!] raw_products                                      0 rows
+2026-04-21 23:59:46,494 [INFO]   [!!] raw_order_payments                                0 rows
+2026-04-21 23:59:46,494 [INFO]   [!!] raw_order_reviews                                 0 rows
+2026-04-21 23:59:46,494 [INFO]   [!!] raw_sellers                                       0 rows
+2026-04-21 23:59:46,495 [INFO]   [!!] raw_geolocation                                   0 rows
+2026-04-21 23:59:46,495 [INFO]   [!!] raw_category_translation                          0 rows
+2026-04-21 23:59:46,495 [INFO] 
+  Completed in 2.6s
+2026-04-21 23:59:46,495 [INFO] =======================================================
+2026-04-22 00:00:51,027 [INFO] =======================================================
+2026-04-22 00:00:51,028 [INFO] ECOMMERCE PIPELINE — DATA INGESTION
+2026-04-22 00:00:51,028 [INFO] Destination : POSTGRES
+2026-04-22 00:00:51,028 [INFO] Source dir  : data/raw
+2026-04-22 00:00:51,028 [INFO] =======================================================
+2026-04-22 00:00:51,029 [INFO] 
+Ingesting olist_orders_dataset.csv...
+2026-04-22 00:00:51,425 [INFO]   Read 99,441 rows, 8 columns
+2026-04-22 00:00:51,426 [INFO]   Validating raw_orders (99,441 rows)...
+2026-04-22 00:00:51,512 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:00:51,513 [ERROR]   FAILED: raw_orders — No module named 'sqlalchemy'
+2026-04-22 00:00:51,520 [INFO] 
+Ingesting olist_order_items_dataset.csv...
+2026-04-22 00:00:51,731 [INFO]   Read 112,650 rows, 7 columns
+2026-04-22 00:00:51,731 [INFO]   Validating raw_order_items (112,650 rows)...
+2026-04-22 00:00:51,788 [INFO]   Validation passed — 112,650 rows ready
+2026-04-22 00:00:51,788 [ERROR]   FAILED: raw_order_items — No module named 'sqlalchemy'
+2026-04-22 00:00:51,792 [INFO] 
+Ingesting olist_customers_dataset.csv...
+2026-04-22 00:00:51,889 [INFO]   Read 99,441 rows, 5 columns
+2026-04-22 00:00:51,889 [INFO]   Validating raw_customers (99,441 rows)...
+2026-04-22 00:00:51,965 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:00:51,965 [ERROR]   FAILED: raw_customers — No module named 'sqlalchemy'
+2026-04-22 00:00:51,971 [INFO] 
+Ingesting olist_products_dataset.csv...
+2026-04-22 00:00:52,010 [INFO]   Read 32,951 rows, 9 columns
+2026-04-22 00:00:52,010 [INFO]   Validating raw_products (32,951 rows)...
+2026-04-22 00:00:52,012 [WARNING]     NULL: 610 nulls in product_category_name
+2026-04-22 00:00:52,025 [INFO]   Validation passed — 32,951 rows ready
+2026-04-22 00:00:52,026 [ERROR]   FAILED: raw_products — No module named 'sqlalchemy'
+2026-04-22 00:00:52,027 [INFO] 
+Ingesting olist_order_payments_dataset.csv...
+2026-04-22 00:00:52,099 [INFO]   Read 103,886 rows, 5 columns
+2026-04-22 00:00:52,099 [INFO]   Validating raw_order_payments (103,886 rows)...
+2026-04-22 00:00:52,140 [INFO]   Validation passed — 103,886 rows ready
+2026-04-22 00:00:52,141 [ERROR]   FAILED: raw_order_payments — No module named 'sqlalchemy'
+2026-04-22 00:00:52,143 [INFO] 
+Ingesting olist_order_reviews_dataset.csv...
+2026-04-22 00:00:52,445 [INFO]   Read 99,224 rows, 7 columns
+2026-04-22 00:00:52,445 [INFO]   Validating raw_order_reviews (99,224 rows)...
+2026-04-22 00:00:52,460 [WARNING]     DEDUP: 814 duplicate review_id — dropping
+2026-04-22 00:00:52,533 [INFO]   Validation passed — 98,410 rows ready
+2026-04-22 00:00:52,538 [ERROR]   FAILED: raw_order_reviews — No module named 'sqlalchemy'
+2026-04-22 00:00:52,544 [INFO] 
+Ingesting olist_sellers_dataset.csv...
+2026-04-22 00:00:52,546 [INFO]   Read 3,095 rows, 4 columns
+2026-04-22 00:00:52,546 [INFO]   Validating raw_sellers (3,095 rows)...
+2026-04-22 00:00:52,552 [INFO]   Validation passed — 3,095 rows ready
+2026-04-22 00:00:52,553 [ERROR]   FAILED: raw_sellers — No module named 'sqlalchemy'
+2026-04-22 00:00:52,553 [INFO] 
+Ingesting olist_geolocation_dataset.csv...
+2026-04-22 00:00:53,113 [INFO]   Read 1,000,163 rows, 5 columns
+2026-04-22 00:00:53,113 [INFO]   Validating raw_geolocation (1,000,163 rows)...
+2026-04-22 00:00:53,409 [INFO]   Validation passed — 1,000,163 rows ready
+2026-04-22 00:00:53,409 [ERROR]   FAILED: raw_geolocation — No module named 'sqlalchemy'
+2026-04-22 00:00:53,417 [INFO] 
+Ingesting product_category_name_translation.csv...
+2026-04-22 00:00:53,421 [INFO]   Read 71 rows, 2 columns
+2026-04-22 00:00:53,421 [INFO]   Validating raw_category_translation (71 rows)...
+2026-04-22 00:00:53,422 [INFO]   Validation passed — 71 rows ready
+2026-04-22 00:00:53,423 [ERROR]   FAILED: raw_category_translation — No module named 'sqlalchemy'
+2026-04-22 00:00:53,423 [INFO] 
+=======================================================
+2026-04-22 00:00:53,423 [INFO] INGESTION SUMMARY
+2026-04-22 00:00:53,423 [INFO] =======================================================
+2026-04-22 00:00:53,423 [INFO]   [!!] raw_orders                                        0 rows
+2026-04-22 00:00:53,423 [INFO]   [!!] raw_order_items                                   0 rows
+2026-04-22 00:00:53,423 [INFO]   [!!] raw_customers                                     0 rows
+2026-04-22 00:00:53,423 [INFO]   [!!] raw_products                                      0 rows
+2026-04-22 00:00:53,424 [INFO]   [!!] raw_order_payments                                0 rows
+2026-04-22 00:00:53,424 [INFO]   [!!] raw_order_reviews                                 0 rows
+2026-04-22 00:00:53,424 [INFO]   [!!] raw_sellers                                       0 rows
+2026-04-22 00:00:53,424 [INFO]   [!!] raw_geolocation                                   0 rows
+2026-04-22 00:00:53,424 [INFO]   [!!] raw_category_translation                          0 rows
+2026-04-22 00:00:53,424 [INFO] 
+  Completed in 2.4s
+2026-04-22 00:00:53,424 [INFO] =======================================================
+2026-04-22 00:04:12,241 [INFO] =======================================================
+2026-04-22 00:04:12,241 [INFO] ECOMMERCE PIPELINE — DATA INGESTION
+2026-04-22 00:04:12,241 [INFO] Destination : POSTGRES
+2026-04-22 00:04:12,241 [INFO] Source dir  : data/raw
+2026-04-22 00:04:12,241 [INFO] =======================================================
+2026-04-22 00:04:12,241 [INFO] 
+Ingesting olist_orders_dataset.csv...
+2026-04-22 00:04:12,598 [INFO]   Read 99,441 rows, 8 columns
+2026-04-22 00:04:12,598 [INFO]   Validating raw_orders (99,441 rows)...
+2026-04-22 00:04:12,664 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:04:13,367 [ERROR]   FAILED: raw_orders — No module named 'psycopg2'
+2026-04-22 00:04:13,371 [INFO] 
+Ingesting olist_order_items_dataset.csv...
+2026-04-22 00:04:13,560 [INFO]   Read 112,650 rows, 7 columns
+2026-04-22 00:04:13,560 [INFO]   Validating raw_order_items (112,650 rows)...
+2026-04-22 00:04:13,615 [INFO]   Validation passed — 112,650 rows ready
+2026-04-22 00:04:13,616 [ERROR]   FAILED: raw_order_items — No module named 'psycopg2'
+2026-04-22 00:04:13,620 [INFO] 
+Ingesting olist_customers_dataset.csv...
+2026-04-22 00:04:13,728 [INFO]   Read 99,441 rows, 5 columns
+2026-04-22 00:04:13,728 [INFO]   Validating raw_customers (99,441 rows)...
+2026-04-22 00:04:13,804 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:04:13,804 [ERROR]   FAILED: raw_customers — No module named 'psycopg2'
+2026-04-22 00:04:13,809 [INFO] 
+Ingesting olist_products_dataset.csv...
+2026-04-22 00:04:13,846 [INFO]   Read 32,951 rows, 9 columns
+2026-04-22 00:04:13,847 [INFO]   Validating raw_products (32,951 rows)...
+2026-04-22 00:04:13,848 [WARNING]     NULL: 610 nulls in product_category_name
+2026-04-22 00:04:13,861 [INFO]   Validation passed — 32,951 rows ready
+2026-04-22 00:04:13,862 [ERROR]   FAILED: raw_products — No module named 'psycopg2'
+2026-04-22 00:04:13,863 [INFO] 
+Ingesting olist_order_payments_dataset.csv...
+2026-04-22 00:04:13,930 [INFO]   Read 103,886 rows, 5 columns
+2026-04-22 00:04:13,930 [INFO]   Validating raw_order_payments (103,886 rows)...
+2026-04-22 00:04:13,966 [INFO]   Validation passed — 103,886 rows ready
+2026-04-22 00:04:13,966 [ERROR]   FAILED: raw_order_payments — No module named 'psycopg2'
+2026-04-22 00:04:13,970 [INFO] 
+Ingesting olist_order_reviews_dataset.csv...
+2026-04-22 00:04:14,255 [INFO]   Read 99,224 rows, 7 columns
+2026-04-22 00:04:14,255 [INFO]   Validating raw_order_reviews (99,224 rows)...
+2026-04-22 00:04:14,271 [WARNING]     DEDUP: 814 duplicate review_id — dropping
+2026-04-22 00:04:14,341 [INFO]   Validation passed — 98,410 rows ready
+2026-04-22 00:04:14,344 [ERROR]   FAILED: raw_order_reviews — No module named 'psycopg2'
+2026-04-22 00:04:14,349 [INFO] 
+Ingesting olist_sellers_dataset.csv...
+2026-04-22 00:04:14,352 [INFO]   Read 3,095 rows, 4 columns
+2026-04-22 00:04:14,353 [INFO]   Validating raw_sellers (3,095 rows)...
+2026-04-22 00:04:14,356 [INFO]   Validation passed — 3,095 rows ready
+2026-04-22 00:04:14,357 [ERROR]   FAILED: raw_sellers — No module named 'psycopg2'
+2026-04-22 00:04:14,357 [INFO] 
+Ingesting olist_geolocation_dataset.csv...
+2026-04-22 00:04:14,909 [INFO]   Read 1,000,163 rows, 5 columns
+2026-04-22 00:04:14,909 [INFO]   Validating raw_geolocation (1,000,163 rows)...
+2026-04-22 00:04:15,197 [INFO]   Validation passed — 1,000,163 rows ready
+2026-04-22 00:04:15,197 [ERROR]   FAILED: raw_geolocation — No module named 'psycopg2'
+2026-04-22 00:04:15,218 [INFO] 
+Ingesting product_category_name_translation.csv...
+2026-04-22 00:04:15,219 [INFO]   Read 71 rows, 2 columns
+2026-04-22 00:04:15,219 [INFO]   Validating raw_category_translation (71 rows)...
+2026-04-22 00:04:15,221 [INFO]   Validation passed — 71 rows ready
+2026-04-22 00:04:15,222 [ERROR]   FAILED: raw_category_translation — No module named 'psycopg2'
+2026-04-22 00:04:15,222 [INFO] 
+=======================================================
+2026-04-22 00:04:15,222 [INFO] INGESTION SUMMARY
+2026-04-22 00:04:15,222 [INFO] =======================================================
+2026-04-22 00:04:15,222 [INFO]   [!!] raw_orders                                        0 rows
+2026-04-22 00:04:15,222 [INFO]   [!!] raw_order_items                                   0 rows
+2026-04-22 00:04:15,223 [INFO]   [!!] raw_customers                                     0 rows
+2026-04-22 00:04:15,223 [INFO]   [!!] raw_products                                      0 rows
+2026-04-22 00:04:15,223 [INFO]   [!!] raw_order_payments                                0 rows
+2026-04-22 00:04:15,223 [INFO]   [!!] raw_order_reviews                                 0 rows
+2026-04-22 00:04:15,223 [INFO]   [!!] raw_sellers                                       0 rows
+2026-04-22 00:04:15,223 [INFO]   [!!] raw_geolocation                                   0 rows
+2026-04-22 00:04:15,223 [INFO]   [!!] raw_category_translation                          0 rows
+2026-04-22 00:04:15,223 [INFO] 
+  Completed in 3.0s
+2026-04-22 00:04:15,223 [INFO] =======================================================
+2026-04-22 00:05:52,887 [INFO] =======================================================
+2026-04-22 00:05:52,887 [INFO] ECOMMERCE PIPELINE — DATA INGESTION
+2026-04-22 00:05:52,887 [INFO] Destination : POSTGRES
+2026-04-22 00:05:52,887 [INFO] Source dir  : data/raw
+2026-04-22 00:05:52,887 [INFO] =======================================================
+2026-04-22 00:05:52,891 [INFO] 
+Ingesting olist_orders_dataset.csv...
+2026-04-22 00:05:53,312 [INFO]   Read 99,441 rows, 8 columns
+2026-04-22 00:05:53,312 [INFO]   Validating raw_orders (99,441 rows)...
+2026-04-22 00:05:53,387 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:05:57,779 [ERROR]   FAILED: raw_orders — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:05:57,779 [INFO] 
+Ingesting olist_order_items_dataset.csv...
+2026-04-22 00:05:57,963 [INFO]   Read 112,650 rows, 7 columns
+2026-04-22 00:05:57,963 [INFO]   Validating raw_order_items (112,650 rows)...
+2026-04-22 00:05:58,023 [INFO]   Validation passed — 112,650 rows ready
+2026-04-22 00:06:02,091 [ERROR]   FAILED: raw_order_items — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:02,091 [INFO] 
+Ingesting olist_customers_dataset.csv...
+2026-04-22 00:06:02,195 [INFO]   Read 99,441 rows, 5 columns
+2026-04-22 00:06:02,196 [INFO]   Validating raw_customers (99,441 rows)...
+2026-04-22 00:06:02,266 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:06:06,312 [ERROR]   FAILED: raw_customers — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:06,313 [INFO] 
+Ingesting olist_products_dataset.csv...
+2026-04-22 00:06:06,353 [INFO]   Read 32,951 rows, 9 columns
+2026-04-22 00:06:06,353 [INFO]   Validating raw_products (32,951 rows)...
+2026-04-22 00:06:06,355 [WARNING]     NULL: 610 nulls in product_category_name
+2026-04-22 00:06:06,368 [INFO]   Validation passed — 32,951 rows ready
+2026-04-22 00:06:10,405 [ERROR]   FAILED: raw_products — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:10,405 [INFO] 
+Ingesting olist_order_payments_dataset.csv...
+2026-04-22 00:06:10,473 [INFO]   Read 103,886 rows, 5 columns
+2026-04-22 00:06:10,474 [INFO]   Validating raw_order_payments (103,886 rows)...
+2026-04-22 00:06:10,509 [INFO]   Validation passed — 103,886 rows ready
+2026-04-22 00:06:14,588 [ERROR]   FAILED: raw_order_payments — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:14,589 [INFO] 
+Ingesting olist_order_reviews_dataset.csv...
+2026-04-22 00:06:14,861 [INFO]   Read 99,224 rows, 7 columns
+2026-04-22 00:06:14,861 [INFO]   Validating raw_order_reviews (99,224 rows)...
+2026-04-22 00:06:14,878 [WARNING]     DEDUP: 814 duplicate review_id — dropping
+2026-04-22 00:06:14,947 [INFO]   Validation passed — 98,410 rows ready
+2026-04-22 00:06:19,014 [ERROR]   FAILED: raw_order_reviews — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:19,014 [INFO] 
+Ingesting olist_sellers_dataset.csv...
+2026-04-22 00:06:19,018 [INFO]   Read 3,095 rows, 4 columns
+2026-04-22 00:06:19,019 [INFO]   Validating raw_sellers (3,095 rows)...
+2026-04-22 00:06:19,022 [INFO]   Validation passed — 3,095 rows ready
+2026-04-22 00:06:23,074 [ERROR]   FAILED: raw_sellers — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:23,076 [INFO] 
+Ingesting olist_geolocation_dataset.csv...
+2026-04-22 00:06:23,636 [INFO]   Read 1,000,163 rows, 5 columns
+2026-04-22 00:06:23,637 [INFO]   Validating raw_geolocation (1,000,163 rows)...
+2026-04-22 00:06:23,927 [INFO]   Validation passed — 1,000,163 rows ready
+2026-04-22 00:06:28,014 [ERROR]   FAILED: raw_geolocation — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:28,015 [INFO] 
+Ingesting product_category_name_translation.csv...
+2026-04-22 00:06:28,015 [INFO]   Read 71 rows, 2 columns
+2026-04-22 00:06:28,015 [INFO]   Validating raw_category_translation (71 rows)...
+2026-04-22 00:06:28,018 [INFO]   Validation passed — 71 rows ready
+2026-04-22 00:06:32,073 [ERROR]   FAILED: raw_category_translation — (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-22 00:06:32,073 [INFO] 
+=======================================================
+2026-04-22 00:06:32,073 [INFO] INGESTION SUMMARY
+2026-04-22 00:06:32,073 [INFO] =======================================================
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_orders                                        0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_order_items                                   0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_customers                                     0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_products                                      0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_order_payments                                0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_order_reviews                                 0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_sellers                                       0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_geolocation                                   0 rows
+2026-04-22 00:06:32,073 [INFO]   [!!] raw_category_translation                          0 rows
+2026-04-22 00:06:32,073 [INFO] 
+  Completed in 39.2s
+2026-04-22 00:06:32,073 [INFO] =======================================================
+2026-04-22 00:09:42,901 [INFO] =======================================================
+2026-04-22 00:09:42,901 [INFO] ECOMMERCE PIPELINE — DATA INGESTION
+2026-04-22 00:09:42,904 [INFO] Destination : POSTGRES
+2026-04-22 00:09:42,904 [INFO] Source dir  : data/raw
+2026-04-22 00:09:42,904 [INFO] =======================================================
+2026-04-22 00:09:42,904 [INFO] 
+Ingesting olist_orders_dataset.csv...
+2026-04-22 00:09:43,283 [INFO]   Read 99,441 rows, 8 columns
+2026-04-22 00:09:43,283 [INFO]   Validating raw_orders (99,441 rows)...
+2026-04-22 00:09:43,348 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:09:56,560 [INFO]   Loaded 99,441 rows -> raw.raw_orders (Postgres)
+2026-04-22 00:09:56,564 [INFO] 
+Ingesting olist_order_items_dataset.csv...
+2026-04-22 00:09:56,752 [INFO]   Read 112,650 rows, 7 columns
+2026-04-22 00:09:56,752 [INFO]   Validating raw_order_items (112,650 rows)...
+2026-04-22 00:09:56,813 [INFO]   Validation passed — 112,650 rows ready
+2026-04-22 00:10:09,894 [INFO]   Loaded 112,650 rows -> raw.raw_order_items (Postgres)
+2026-04-22 00:10:09,897 [INFO] 
+Ingesting olist_customers_dataset.csv...
+2026-04-22 00:10:10,002 [INFO]   Read 99,441 rows, 5 columns
+2026-04-22 00:10:10,002 [INFO]   Validating raw_customers (99,441 rows)...
+2026-04-22 00:10:10,085 [INFO]   Validation passed — 99,441 rows ready
+2026-04-22 00:10:18,869 [INFO]   Loaded 99,441 rows -> raw.raw_customers (Postgres)
+2026-04-22 00:10:18,873 [INFO] 
+Ingesting olist_products_dataset.csv...
+2026-04-22 00:10:18,908 [INFO]   Read 32,951 rows, 9 columns
+2026-04-22 00:10:18,911 [INFO]   Validating raw_products (32,951 rows)...
+2026-04-22 00:10:18,912 [WARNING]     NULL: 610 nulls in product_category_name
+2026-04-22 00:10:18,926 [INFO]   Validation passed — 32,951 rows ready
+2026-04-22 00:10:23,609 [INFO]   Loaded 32,951 rows -> raw.raw_products (Postgres)
+2026-04-22 00:10:23,610 [INFO] 
+Ingesting olist_order_payments_dataset.csv...
+2026-04-22 00:10:23,679 [INFO]   Read 103,886 rows, 5 columns
+2026-04-22 00:10:23,679 [INFO]   Validating raw_order_payments (103,886 rows)...
+2026-04-22 00:10:23,718 [INFO]   Validation passed — 103,886 rows ready
+2026-04-22 00:10:33,025 [INFO]   Loaded 103,886 rows -> raw.raw_order_payments (Postgres)
+2026-04-22 00:10:33,026 [INFO] 
+Ingesting olist_order_reviews_dataset.csv...
+2026-04-22 00:10:33,324 [INFO]   Read 99,224 rows, 7 columns
+2026-04-22 00:10:33,324 [INFO]   Validating raw_order_reviews (99,224 rows)...
+2026-04-22 00:10:33,351 [WARNING]     DEDUP: 814 duplicate review_id — dropping
+2026-04-22 00:10:33,422 [INFO]   Validation passed — 98,410 rows ready
+2026-04-22 00:10:44,726 [INFO]   Loaded 98,410 rows -> raw.raw_order_reviews (Postgres)
+2026-04-22 00:10:44,730 [INFO] 
+Ingesting olist_sellers_dataset.csv...
+2026-04-22 00:10:44,734 [INFO]   Read 3,095 rows, 4 columns
+2026-04-22 00:10:44,735 [INFO]   Validating raw_sellers (3,095 rows)...
+2026-04-22 00:10:44,739 [INFO]   Validation passed — 3,095 rows ready
+2026-04-22 00:10:45,047 [INFO]   Loaded 3,095 rows -> raw.raw_sellers (Postgres)
+2026-04-22 00:10:45,047 [INFO] 
+Ingesting olist_geolocation_dataset.csv...
+2026-04-22 00:10:45,618 [INFO]   Read 1,000,163 rows, 5 columns
+2026-04-22 00:10:45,618 [INFO]   Validating raw_geolocation (1,000,163 rows)...
+2026-04-22 00:10:45,921 [INFO]   Validation passed — 1,000,163 rows ready
+2026-04-22 00:12:14,652 [INFO]   Loaded 1,000,163 rows -> raw.raw_geolocation (Postgres)
+2026-04-22 00:12:14,660 [INFO] 
+Ingesting product_category_name_translation.csv...
+2026-04-22 00:12:14,662 [INFO]   Read 71 rows, 2 columns
+2026-04-22 00:12:14,662 [INFO]   Validating raw_category_translation (71 rows)...
+2026-04-22 00:12:14,664 [INFO]   Validation passed — 71 rows ready
+2026-04-22 00:12:14,722 [INFO]   Loaded 71 rows -> raw.raw_category_translation (Postgres)
+2026-04-22 00:12:14,723 [INFO] 
+=======================================================
+2026-04-22 00:12:14,723 [INFO] INGESTION SUMMARY
+2026-04-22 00:12:14,723 [INFO] =======================================================
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_orders                                   99,441 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_order_items                             112,650 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_customers                                99,441 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_products                                 32,951 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_order_payments                          103,886 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_order_reviews                            98,410 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_sellers                                   3,095 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_geolocation                            1,000,163 rows
+2026-04-22 00:12:14,723 [INFO]   [OK] raw_category_translation                         71 rows
+2026-04-22 00:12:14,723 [INFO] 
+  Completed in 151.8s
+2026-04-22 00:12:14,723 [INFO] =======================================================
