@@ -50,20 +50,7 @@ jobs:
       - name: Write dbt profiles
         run: |
           mkdir -p ~/.dbt
-          cat > ~/.dbt/profiles.yml << 'EOF'
-ecommerce_dbt:
-  target: ci
-  outputs:
-    ci:
-      type: postgres
-      host: localhost
-      user: postgres
-      password: password
-      port: 5432
-      dbname: ecommerce_test
-      schema: dbt_ci
-      threads: 2
-EOF
+          printf 'ecommerce_dbt:\n  target: ci\n  outputs:\n    ci:\n      type: postgres\n      host: localhost\n      user: postgres\n      password: password\n      port: 5432\n      dbname: ecommerce_test\n      schema: dbt_ci\n      threads: 2\n' > ~/.dbt/profiles.yml
 
       - name: Run dbt
         run: |
